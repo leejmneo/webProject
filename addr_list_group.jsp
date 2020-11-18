@@ -2,11 +2,12 @@
     pageEncoding="EUC-KR" import="jspbook.ch08.*" %>
      <%request.setCharacterEncoding("utf-8"); %>
     <jsp:useBean id="am" class="jspbook.ch08.AddrManager" scope="application" />   
+<!-- ì•„ì§ ë¯¸ì™„ì„± -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>±×·ì ÁÖ¼Ò ¸ñ·Ï</title>
+<title>ê·¸ë£¹ ì£¼ì†Œ ëª©ë¡</title>
 <style>
 table, td {
 	border : 1px solid black;
@@ -17,14 +18,14 @@ table, td {
 </head>
 <body>
 <div align="center">
-<h2>ÁÖ¼Ò·Ï (±×·ìº° º¸±â)</h2>
+<h2>ì£¼ì†Œë¡ (ê·¸ë£¹ë³„ ë³´ê¸°)</h2>
 <hr>
-<a href="addr_form.jsp">ÁÖ¼ÒÃß°¡</a><P>
+<a href="addr_form.jsp">ì£¼ì†Œì¶”ê°€</a><P>
 <table>
-<tr><td>ÀÌ¸§</td><td>ÀüÈ­¹øÈ£</td><td>ÀÌ¸ŞÀÏ</td><td>¼ºº°</td><td>±×·ì</td></tr>
+<tr><td>ì´ë¦„</td><td>ì „í™”ë²ˆí˜¸</td><td>ì´ë©”ì¼</td><td>ì„±ë³„</td><td>ê·¸ë£¹</td></tr>
 <%
 	for (AddrBean ab : am.getAddrlist()) {
-		if (ab.getGroup().equals(("°¡Á·"))) {
+		if (ab.getGroup().equals(("ê°€ì¡±"))) {
 %>
 <tr>
 <td><%=ab.getUsername() %></td>
@@ -36,7 +37,7 @@ table, td {
 <% } }%>
 <%
 	for (AddrBean ab : am.getAddrlist()) {
-		if (ab.getGroup().equals(("Ä£±¸"))) {
+		if (ab.getGroup().equals(("ì¹œêµ¬"))) {
 %>
 <tr>
 <td><%=ab.getUsername() %></td>
@@ -48,7 +49,7 @@ table, td {
 <% } }%>
 <%
 	for (AddrBean ab : am.getAddrlist()) {
-		if (ab.getGroup().equals(("Á÷Àå"))) {
+		if (ab.getGroup().equals(("ì§ì¥"))) {
 %>
 <tr>
 <td><%=ab.getUsername() %></td>
