@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" import="jspbook.ch08.*" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="jspbook.ch08.*" %>
      <%request.setCharacterEncoding("utf-8"); %>
 	<%@ page import = "java.util.ArrayList" %>
 	<%@ page import = "java.util.List" %>
@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>�ּҷ� ���</title>
+<title>주소록 목록</title>
 <style>
 table, td {
 	border : 1px solid black;
@@ -28,11 +28,11 @@ else
 	currentPage = Integer.parseInt(sindex);
 %>
 <div align="center">
-<h2>�ּҷ� (��ü����)</h2>
+<h2>주소록 (전체보기)</h2>
 <hr>
-<a href="addr_form.jsp">�ּ��߰�</a><P>
+<a href="addr_form.jsp">주소추가</a><P>
 <table>
-<tr><td>�̸�</td><td>��ȭ��ȣ</td><td>�̸���</td><td>����</td><td>�׷�</td></tr>
+<tr><td>이름</td><td>전화번호</td><td>이메일</td><td>성별</td><td>그룹</td></tr>
 <%
 	int startIndex = currentPage * 2 - 2;
 	int lastIndex = currentPage * 2 - 1;
