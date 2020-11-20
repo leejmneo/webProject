@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" import="jspbook.ch08.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="jspbook.ch08.*"%>
 <!DOCTYPE html>
  <%request.setCharacterEncoding("UTF-8"); %>
  <jsp:useBean id="addr" class="jspbook.ch08.AddrBean"/>
@@ -11,20 +11,20 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>��ϳ���</title>
+<title>등록내용</title>
 </head>
 <body>
 <div align="center">
-<h2>��ϳ���</h2>
-�̸� : <%=addr.getUsername() %><P>
-��ȭ��ȣ : <%=addr.getTel() %> <P>
-�̸��� : <%=addr.getEmail() %> <P>
-���� : <%=addr.getSex() %> <P>
-�׷� : <%=addr.getGroup() %> <P>
+<h2>등록내용</h2>
+이름 : <%=addr.getUsername() %><P>
+전화번호 : <%=addr.getTel() %> <P>
+이메일 : <%=addr.getEmail() %> <P>
+성별 : <%=addr.getSex() %> <P>
+그룹 : <%=addr.getGroup() %> <P>
 <hr>
-<a href="addr_list.jsp">��ü ��Ϻ���</a>
+<a href="addr_list.jsp">전체 목록보기</a>
 &nbsp;
-<a href="addr_list_group.jsp">�׷캰 ��Ϻ���</a>
+<a href="addr_list_group.jsp">그룹별 목록보기</a>
 </div>
 </body>
 </html>
