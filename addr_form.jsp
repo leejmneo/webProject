@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="jspbook.ch08.*"%>
+    pageEncoding="EUC-KR" import="jspbook.ch08.*"%>
     <%request.setCharacterEncoding("utf-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
-<title>주소록 등록</title>
+<title>�ּҷ� ���</title>
 <style>
 table, td {
 	border : 1px solid black;
@@ -18,44 +18,44 @@ td {
 </head>
 <body>
 <div align="center">
-<h2>주소록 등록</h2>
+<h2>�ּҷ� ���</h2>
 <hr>
 <form name=form1 method="post" action=addr_add.jsp>
 <table>
 <tr>
-<td>이름</td>
+<td>�̸�</td>
 <td><input type=text size=20 name=username></td>
 </tr>
 <tr>
-<td>전화번호</td>
+<td>��ȭ��ȣ</td>
 <td><input type=text size = 20 name=tel></td>
 </tr>
 <tr>
-<td>이메일</td>
+<td>�̸���</td>
 <td><input type=text size = 20 name=email></td>
 </tr>
 <tr>
-<td>성별</td>
+<td>����</td>
 <td>
 <select name=sex>
-<option selected>남</option>
-<option>여</option>
+<option selected>��</option>
+<option>��</option>
 </select>
 </td>
 </tr>
 <tr>
-<td>그룹</td>
+<td>�׷�</td>
 <td>
 <select name=group>
-<option selected>가족</option>
-<option>친구</option>
-<option>직장</option>
+<option selected>����</option>
+<option>ģ��</option>
+<option>����</option>
 </select>
 </td>
 </tr>
 <tr><td colspan=2 align="center">
-<input type=submit value="확인">
-<input type=reset value="취소">
+<input type=submit value="Ȯ��">
+<input type=reset value="���">
 </td>
 </tr>
 </table>
