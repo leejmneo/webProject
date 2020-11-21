@@ -1,13 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="jspbook.ch08.*" %>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR" import="jspbook.ch08.*" %>
      <%request.setCharacterEncoding("utf-8"); %>
     <jsp:useBean id="am" class="jspbook.ch08.AddrManager" scope="application" />   
-<!-- 아직 미완성 -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>그룹 주소 목록</title>
+<title>�׷� �ּ� ���</title>
 <style>
 table, td {
 	border : 1px solid black;
@@ -18,14 +17,15 @@ table, td {
 </head>
 <body>
 <div align="center">
-<h2>주소록 (그룹별 보기)</h2>
+<h1><a href = "index.jsp" target="_self">WEB PROGRAMING PROJECT</a></h1>
+<h2>�ּҷ� (�׷캰 ����)</h2>
 <hr>
-<a href="addr_form.jsp">주소추가</a><P>
+<a href="addr_form.jsp">�ּ��߰�</a><P>
 <table>
-<tr><td>이름</td><td>전화번호</td><td>이메일</td><td>성별</td><td>그룹</td></tr>
+<tr><td>�̸�</td><td>��ȭ��ȣ</td><td>�̸���</td><td>����</td><td>�׷�</td></tr>
 <%
 	for (AddrBean ab : am.getAddrlist()) {
-		if (ab.getGroup().equals(("가족"))) {
+		if (ab.getGroup().equals(("����"))) {
 %>
 <tr>
 <td><%=ab.getUsername() %></td>
@@ -37,7 +37,7 @@ table, td {
 <% } }%>
 <%
 	for (AddrBean ab : am.getAddrlist()) {
-		if (ab.getGroup().equals(("친구"))) {
+		if (ab.getGroup().equals(("ģ��"))) {
 %>
 <tr>
 <td><%=ab.getUsername() %></td>
@@ -49,7 +49,7 @@ table, td {
 <% } }%>
 <%
 	for (AddrBean ab : am.getAddrlist()) {
-		if (ab.getGroup().equals(("직장"))) {
+		if (ab.getGroup().equals(("����"))) {
 %>
 <tr>
 <td><%=ab.getUsername() %></td>
