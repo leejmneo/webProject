@@ -192,13 +192,14 @@
 	
 	boolean overlap = true;
 	if(lectureType[selectTime][selectDay] != 0)
+		overlap = false;
 	if(consecutiveE[selectTime][selectDay] == 0)
 		overlap = false;
 	if(lectureTitle[selectTime][selectDay] != -1)
 		overlap = false;
 	int check = selectTime + 1;
 	for(i = 1; i < selectConsecutive; i++){
-		if(consecutiveE[check][selectDay] == 0)
+		if((consecutiveE[check][selectDay] == 0)|| lectureTitleE[check++][selectDay] != -1)
 			overlap = false;
 	}
 
@@ -283,7 +284,20 @@
 		out.println(address + "<br>");
 	}
 %>
-
+<%--
+<form method="post" action="Problem03.jsp">
+<% 
+	boolean restart = false;
+	String answer = request.getParameter("reset");
+	
+	if(answer.equals("reset"))
+		restart = true;
+	if(restart == true)
+		session.invalidate();
+%>
+<input type="button" value="reset" onclick="/>
+</form>
+--%>
 </div>
 </body>
 </html>
