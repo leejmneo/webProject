@@ -191,20 +191,21 @@
 	}
 	
 	boolean overlap = true;
-	if(lectureType[selectTime][selectDay] != 0)
+	if(lectureType[selectTime][selectDay] != 0) //추가 하고 싶은 시간표에 기존 시간표가 위치할 때
 		overlap = false;
-	if(consecutiveE[selectTime][selectDay] == 0)
+	if(consecutiveE[selectTime][selectDay] == 0)//추가 하고싶은 시간표가 기존의 시간표의 연강 자리에 위치할때
 		overlap = false;
-	if(lectureTitle[selectTime][selectDay] != -1)
+	if(lectureTitle[selectTime][selectDay] != -1)//추가 하고 싶은 시간표에 기존 시간표가 위치할 때
 		overlap = false;
+	
 	int check = selectTime + 1;
 	for(i = 1; i < selectConsecutive; i++){
 		if((consecutiveE[check][selectDay] == 0)|| lectureTitleE[check++][selectDay] != -1)
 			overlap = false;
-	}
+	} //추가하고 싶은 시간표의 연강이 기존의 시간표와 겹칠 경우 명령이 실행되지 않는다.
 
 	if((overlap == true) && (flag == false) && schedule != null 
-			&& (list.contains(schedule) == false))
+			&& (list.contains(schedule) == false)) //기존의 요구와 같은 요구가 들어올경우 추가가 되지않는다.
 	{
 		list.add(schedule);
 		
@@ -284,20 +285,6 @@
 		out.println(address + "<br>");
 	}
 %>
-<%--
-<form method="post" action="Problem03.jsp">
-<% 
-	boolean restart = false;
-	String answer = request.getParameter("reset");
-	
-	if(answer.equals("reset"))
-		restart = true;
-	if(restart == true)
-		session.invalidate();
-%>
-<input type="button" value="reset" onclick="/>
-</form>
---%>
 </div>
 </body>
 </html>
