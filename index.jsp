@@ -31,41 +31,30 @@
 	tr.index{
 		border-style: groove;
 	}
-	#go {
-		float : right;
-		width : 60px;
-		height : 60px;
-	}
 </style>
 </head>
 <body>
 <ul>	<%--상단 메뉴?--%>
-	<li>주소록</li>
-	<li>달력</li>
-	<li>시간표</li>
+   <li><a href="#p1">주소록</a></li>
+   <li><a href="#p2">달력</a></li>
+   <li><a href="#p3">시간표</a></li>
 </ul>
 <div align="center">
 	<h1><a href = "index.jsp" target="_self">WEB PROGRAMING PROJECT</a></h1>
 	<hr>
 	<table class="index">
-		<tr class="index">
+		<tr class="index" id="p1">
 			<td>
-			<a href = "addr_form.jsp" target="_blank">
-			<input id = "go" type = button value = "GO"></a>
-			<jsp:include page="addr_form.jsp"/>
+			<jsp:include page = "addr_form.jsp"/>
 			</td>
 		</tr>
-		<tr class="index">
+		<tr class="index" id="p2">
 			<td>
-			<a href = "calendar.jsp" target="_blank">
-			<input id = "go" type = button value = "GO"></a>
 			<jsp:include page="calendar.jsp"/>
 			</td>
 		</tr>
-		<tr class="index">
+		<tr class="index"id="p3">
 			<td>
-			<a href = "Problem03.jsp" target="_blank">
-			<input id = "go" type = button value = "GO"></a>
 			<jsp:include page="Problem03.jsp"/>
 			</td>
 		</tr>
