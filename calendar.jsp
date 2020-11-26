@@ -26,9 +26,13 @@ font {
 	font-size : medium;
 }
 
-#header {
+#top_header {
 	width : 100%;
 	height : 40px;
+	border : 0px !important;
+}
+th {
+	border : 0px !important;
 }
 
 #calendar {
@@ -79,7 +83,7 @@ font {
 	int end = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
 	String[] s = { "일", "월", "화", "수", "목", "금", "토" };
 
-	out.println("<table id=\"header\">");
+	out.println("<table id=\"top_header\">");
 	
 	out.println("<tr>" + "<th style=\"text-align:left\">");
 	out.print("<a href = \"calendar.jsp?YEAR=" + (year-1));
@@ -110,7 +114,6 @@ font {
 	out.println("</table>");
 	
 	out.println("<table id=\"calendar\">");
-	
 	int row = 6;
 	if (day + end > 35)
 		row = 7;
