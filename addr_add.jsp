@@ -12,10 +12,18 @@
 <head>
 <meta charset="EUC-KR">
 <title>등록내용</title>
+<style>
+#go {
+		float : right;
+		width : 60px;
+		height : 60px;
+	}
+</style>
 </head>
 <body>
 <div align="center">
-<h1><a href = "index.jsp" target="_self">WEB PROGRAMING PROJECT</a></h1>
+<a href = "index.jsp" target="_self">
+<input id = "go" type = button value = "BACK"></a>
 <h2>등록내용</h2>
 이름 : <%=addr.getUsername() %><P>
 전화번호 : <%=addr.getTel() %> <P>

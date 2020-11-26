@@ -12,9 +12,14 @@
 <style>
 table, td {
 	border : 1px solid black;
-	width: 500px;
+	width: 700px;
 	text-align : center;
 }
+#go {
+		float : right;
+		width : 60px;
+		height : 60px;
+	}
 </style>
 </head>
 <body>
@@ -33,7 +38,8 @@ else
 	currentPage = Integer.parseInt(sindex);
 %>
 <div align="center">
-<h1><a href = "index.jsp" target="_self">WEB PROGRAMING PROJECT</a></h1>
+<a href = "index.jsp" target="_self">
+<input id = "go" type = button value = "BACK"></a>
 <h2>주소록 (전체보기)</h2>
 <form>
 <select name = roll>

@@ -14,11 +14,18 @@ td {
 	width : 70px;
 	height : 30px;
 }
+#go {
+		float : right;
+		width : 60px;
+		height : 60px;
+	}
 </style>
 </head>
 <body>
 <div align="center">
-<h2>주소록 등록</h2>
+<a href = "index.jsp" target="_self">
+<input id = "go" type = button value = "BACK"></a>
+<h2>주소록등록</h2>
 <hr>
 <form name=form1 method="post" action=addr_add.jsp>
 <table>

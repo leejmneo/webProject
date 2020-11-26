@@ -13,11 +13,17 @@ table, td {
 	width: 500px;
 	text-align : center;
 }
+#go {
+		float : right;
+		width : 60px;
+		height : 60px;
+	}
 </style>
 </head>
 <body>
 <div align="center">
-<h1><a href = "index.jsp" target="_self">WEB PROGRAMING PROJECT</a></h1>
+<a href = "index.jsp" target="_self">
+<input id = "go" type = button value = "BACK"></a>
 <h2>주소록 (그룹별 보기)</h2>
 <hr>
 <a href="addr_form.jsp">주소추가</a><P>
