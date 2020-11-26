@@ -21,20 +21,17 @@ public String parseDay(int cnt, String day) {
 
   
 <style type="text/css">
-
 font {
 	font-size : medium;
 }
-
 #top_header {
-	width : 100%;
-	height : 40px;
-	border : 0px !important;
+   width : 100%;
+   height : 40px;
+   border : none;
 }
 th {
-	border : 0px !important;
+   border : 0px !important;
 }
-
 #calendar {
 	width : 100%;
 	border : 1px solid;
@@ -52,16 +49,21 @@ th {
 	border : 1px solid;
     border-collapse : collapse;
 }
-
+#go {
+		float : right;
+		width : 60px;
+		height : 60px;
+	}
 </style>
 </head>
 <body>
+<a href = "index.jsp" target="_self">
+<input id = "go" type = button value = "BACK"></a>
 <%
 	Calendar today = Calendar.getInstance();
 	int nowYear = today.get(Calendar.YEAR);
 	int nowMonth = today.get(Calendar.MONTH) + 1; 
 	int nowDate = today.get(Calendar.DATE);
-
 	//기본값
 	Calendar cal = Calendar.getInstance();
 	int year = nowYear;
@@ -74,15 +76,12 @@ th {
 		year = Integer.parseInt(sYear);
 	if(sMonth!=null)
 		month = Integer.parseInt(sMonth);
-
 	cal.set(year, month - 1, 1);
-
 	int num = 1;
 	int count = 0;
 	int day = cal.get(Calendar.DAY_OF_WEEK) - 1;
 	int end = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
 	String[] s = { "일", "월", "화", "수", "목", "금", "토" };
-
 	out.println("<table id=\"top_header\">");
 	
 	out.println("<tr>" + "<th style=\"text-align:left\">");
@@ -91,7 +90,6 @@ th {
 	out.println(year + "년");
 	out.print("<a href = \"calendar.jsp?YEAR=" + (year+1));
 	out.println("&MONTH=" + month + "\">" + "▶ </a>" + "</th>");	
-
 	out.print("<th style=\"text-align:center\">");
 	out.print("<a href = \"calendar.jsp?YEAR=" + year);
 	if (month == 1) 
@@ -114,6 +112,7 @@ th {
 	out.println("</table>");
 	
 	out.println("<table id=\"calendar\">");
+	
 	int row = 6;
 	if (day + end > 35)
 		row = 7;
