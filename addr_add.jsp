@@ -10,7 +10,7 @@
  %>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>등록내용</title>
 <style>
 #go {
@@ -21,15 +21,16 @@
 </style>
 </head>
 <body>
-<div align="center">
+<div align = "center">
 <a href = "index.jsp" target="_self">
 <input id = "go" type = button value = "BACK"></a>
+<BR><BR><BR>
 <h2>등록내용</h2>
-이름 : <%=addr.getUsername() %><P>
-전화번호 : <%=addr.getTel() %> <P>
-이메일 : <%=addr.getEmail() %> <P>
-성별 : <%=addr.getSex() %> <P>
-그룹 : <%=addr.getGroup() %> <P>
+	이름 : <%=addr.getUsername() %><P>
+	전화번호 : <%=addr.getTel() %><P>
+	이메일 : <%=addr.getEmail() %><P>
+	성별 : <%=addr.getSex() %><P>
+	그룹 : <%=addr.getGroup() %><P>
 <hr>
 <a href="addr_list.jsp">전체 목록보기</a>
 &nbsp;

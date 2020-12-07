@@ -51,7 +51,9 @@ else
 <input type = submit value = "개 정렬"></a>
 </form>
 <hr>
-<a href="addr_form.jsp">주소추가</a><P>
+<a href="addr_form.jsp">주소추가</a>
+&nbsp;
+<a href="addr_list_group.jsp">그룹별 보기</a><P>
 <table>
 <tr><td>이름</td><td>전화번호</td><td>이메일</td><td>성별</td><td>그룹</td></tr>
 <%

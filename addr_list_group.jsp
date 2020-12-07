@@ -26,7 +26,9 @@ table, td {
 <input id = "go" type = button value = "BACK"></a>
 <h2>주소록 (그룹별 보기)</h2>
 <hr>
-<a href="addr_form.jsp">주소추가</a><P>
+<a href="addr_form.jsp">주소추가</a>
+&nbsp;
+<a href="addr_list.jsp">전체 보기</a><P><P>
 <table>
 <tr><td>이름</td><td>전화번호</td><td>이메일</td><td>성별</td><td>그룹</td></tr>
 <%
